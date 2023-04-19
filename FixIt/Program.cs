@@ -1,4 +1,5 @@
 using FixIt.Data;
+using FixIt.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -18,6 +19,7 @@ namespace FixIt
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            builder.Services.AddScoped<IFixItService, FixItService>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

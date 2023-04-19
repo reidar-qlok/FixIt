@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using FixIt.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FixIt.Data
@@ -9,5 +10,6 @@ namespace FixIt.Data
             : base(options)
         {
         }
+        public DbSet<ToDoItem> ToDoItems { get; set; }
     }
 }

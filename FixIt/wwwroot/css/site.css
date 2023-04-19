@@ -20,3 +20,10 @@ html {
 body {
   margin-bottom: 60px;
 }
+div.ToDo-panel{
+    margin-top: 15px;
+}
+table tr.done{
+    text-decoration: line-through;
+    color:crimson;
+}
