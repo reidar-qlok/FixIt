@@ -7,6 +7,7 @@ namespace FixIt.Models
     {
         [Key]
         public Guid ToDoItemId { get; set; }
+        public string UserName { get; set; }
         public Boolean IsDone { get; set; }
         [Required]
         [StringLength(50, MinimumLength =3)]
